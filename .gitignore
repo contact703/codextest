@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+node_modules/
+dist/
+outputs/
+.env
+.DS_Store
+*.log
+.idea/
+.vscode/
+web/frontend/.next/
+web/frontend/out/
+web/backend/.venv/
+packages/adtool/.venv/
+desktop/app/node_modules/
+desktop/app/src-tauri/target/

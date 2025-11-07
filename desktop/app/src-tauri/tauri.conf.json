@@ -1,0 +1,43 @@
+{
+  "$schema": "https://tauri.app/schema.json",
+  "package": {
+    "productName": "Audiodescrição Toolkit",
+    "version": "0.1.0"
+  },
+  "build": {
+    "beforeBuildCommand": "npm install",
+    "beforeDevCommand": "npm install",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "allow": true,
+        "scope": [
+          {
+            "name": "ffmpeg",
+            "cmd": "ffmpeg"
+          }
+        ]
+      },
+      "dialog": {
+        "open": true
+      }
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "title": "Audiodescrição Toolkit",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  }
+}

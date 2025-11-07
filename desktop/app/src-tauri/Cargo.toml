@@ -1,0 +1,19 @@
+[package]
+name = "adtool_desktop"
+version = "0.1.0"
+edition = "2021"
+authors = ["Audiodescricao Toolkit"]
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "1", features = ["dialog-open", "shell-open"] }
+anyhow = "1"
+walkdir = "2"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

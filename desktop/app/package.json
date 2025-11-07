@@ -1,0 +1,21 @@
+{
+  "name": "adtool-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.0",
+    "typescript": "^5.1.0"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@tauri-apps/api": "^1.5.0",
+    "zustand": "4.4.0",
+    "tailwindcss": "3.3.3",
+    "wavesurfer.js": "7.2.3"
+  }
+}
