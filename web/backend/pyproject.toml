@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adtool-backend"
+version = "0.1.0"
+description = "API FastAPI para processamento de audiodescrição"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Audiodescricao Toolkit" }]
+dependencies = [
+    "fastapi>=0.109",
+    "uvicorn[standard]>=0.23",
+    "pydantic>=2.5",
+    "python-multipart>=0.0.7",
+    "typer>=0.9",
+    "celery>=5.3",
+    "redis>=5.0",
+    "adtool @ file://../..//packages/adtool"
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]

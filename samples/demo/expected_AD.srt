@@ -1,0 +1,7 @@
+1
+00:00:02,000 --> 00:00:05,000
+[AD] Logo colorida com coelho em fundo azul.
+
+2
+00:00:07,500 --> 00:00:10,500
+[AD] Coelho branco ergue a cabeça e observa o céu.

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adtool"
+version = "0.1.0"
+description = "Ferramentas offline para gerar audiodescrição brasileira"
+readme = "README.md"
+authors = [{ name = "Audiodescricao Toolkit" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "typer[all]>=0.9",
+    "rich>=13",
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "moviepy>=1.0",
+    "tqdm>=4.66",
+    "jinja2>=3.1",
+    "platformdirs>=4.0",
+    "jsonschema>=4.20",
+    "python-multipart>=0.0.7"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.1.9"
+]
+full = [
+    "piper-tts>=1.2.0",
+    "faster-whisper>=0.10.0",
+    "torch>=2.1.0",
+    "torchaudio>=2.1.0",
+    "transformers>=4.35"
+]
+
+[project.scripts]
+adtool = "adtool.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["adtool"]
+include = ["adtool*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["../../tests"]
